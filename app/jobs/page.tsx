@@ -21,6 +21,7 @@ export default function Jobs() {
       try {
 
 const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/jobs`);
+
         const json = await res.json();
         const parsed = json.data.map((item: any) => ({
           id: item.id,
