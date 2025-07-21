@@ -20,8 +20,8 @@ export default function Jobs() {
     const fetchJobs = async () => {
       try {
 
-const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/jobs`);
-
+         const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/jobs`);
+               const x=1000;
         const json = await res.json();
         const parsed = json.data.map((item: any) => ({
           id: item.id,
